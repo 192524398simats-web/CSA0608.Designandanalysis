@@ -1,0 +1,32 @@
+# Fast Power using Iterative Method
+
+def power_iterative(x, n):
+    result = 1
+    while n > 0:
+        if n % 2 == 1:
+            result *= x
+        x *= x
+        n //= 2
+    return result
+
+
+# Fast Power using Recursive Method
+
+def power_recursive(x, n):
+    if n == 0:
+        return 1
+
+    half = power_recursive(x, n // 2)
+
+    if n % 2 == 0:
+        return half * half
+    else:
+        return x * half * half
+
+
+# Sample Input
+x = 2
+n = 10
+
+print("Iterative Fast Power:", power_iterative(x, n))
+print("Recursive Fast Power:", power_recursive(x, n))

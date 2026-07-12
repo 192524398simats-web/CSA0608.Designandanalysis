@@ -1,0 +1,13 @@
+# Recursive Euclidean Algorithm to find GCD
+
+def gcd(a, b):
+    if b == 0:
+        return a
+    return gcd(b, a % b)
+
+
+# Sample Input
+a = 48
+b = 18
+
+print("GCD of", a, "and", b, "is:", gcd(a, b))

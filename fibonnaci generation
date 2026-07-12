@@ -1,0 +1,31 @@
+# Fibonacci using Iterative Method
+
+def fibonacci_iterative(n):
+    a, b = 0, 1
+    print("Iterative Fibonacci Series:")
+    for _ in range(n):
+        print(a, end=" ")
+        a, b = b, a + b
+    print()
+
+
+# Fibonacci using Recursive Method
+
+def fibonacci_recursive(num):
+    if num <= 1:
+        return num
+    return fibonacci_recursive(num - 1) + fibonacci_recursive(num - 2)
+
+
+def print_recursive_fibonacci(n):
+    print("Recursive Fibonacci Series:")
+    for i in range(n):
+        print(fibonacci_recursive(i), end=" ")
+    print()
+
+
+# Sample Input
+n = 6
+
+fibonacci_iterative(n)
+print_recursive_fibonacci(n)
